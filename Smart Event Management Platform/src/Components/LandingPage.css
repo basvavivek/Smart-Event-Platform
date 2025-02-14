@@ -1,0 +1,41 @@
+.banner {
+  background-image: url('./assets/Screenshot_2025-02-05_102720.jpg');
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+  text-align: center; /* Center the text and buttons */
+  padding: 50px; /* Add some padding for better spacing */
+  color: blue; /* Set text color to white */
+}
+
+  
+  .banner h1 {
+    font-size: 5em;
+    color: black;
+    background-color: turquoise;
+    background-image: -webkit-gradient("Screenshot_2025-02-05_102720.jpg");
+  }
+  
+  .banner button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .category {
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+  }
+  
+  
+  
