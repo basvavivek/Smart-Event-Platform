@@ -1,21 +1,33 @@
-import React from 'react';
-import './Header.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import "./Header.css";
 
-function Header() {
+export default function Header() {
+  const { user, logout } = useAuth();
+
   return (
-    <header>
-      <nav>
+    <header className="header">
+      <nav className="navbar">
         <ul>
-          <li><a href="#find-events">Find Events</a></li>
-          <li><a href="#create-event">Create Event</a></li>
-          <li><a href="#help-center">Help Center</a></li>
-          <li><a href="#find-tickets">Find My Tickets</a></li>
-          <li><a href="#login">Log In</a></li>
-          <li><a href="#signup">Sign Up</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/find-events">Find Events</Link></li>
+          <li><Link to="/create-event">Create Event</Link></li>
+          <li><Link to="/help-center">Help Center</Link></li>
+          <li><Link to="/find-tickets">Find My Tickets</Link></li>
+          {user ? (
+            <>
+              <li><Link to="/profile">{user.name}</Link></li>
+              <li><button onClick={logout} className="logout-btn">Logout</button></li>
+            </>
+          ) : (
+            <>
+              <li><Link to="/login">Log In</Link></li>
+              <li><Link to="/signup">Sign Up</Link></li>
+            </>
+          )}
         </ul>
       </nav>
     </header>
   );
 }
-
-export default Header;

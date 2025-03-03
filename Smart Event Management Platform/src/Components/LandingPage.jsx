@@ -1,26 +1,27 @@
-import React from 'react';
-import './LandingPage.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./LandingPage.css";
 
-function LandingPage() {
+export default function LandingPage() {
   return (
-    <main>
-      <section className="banner">
-        <h1>Smart Event Management Platform.</h1>
-        <button>Make Plans</button>
-        <button>Explore Events</button>
-      </section>
-      <section className="categories">
-        <div className="category">Music</div>
-        <div className="category">Nightlife</div>
-        <div className="category">Performing Arts</div>
-        <div className="category">Holidays</div>
-        <div className="category">Dating</div>
-        <div className="category">Hobbies</div>
-        <div className="category">Business</div>
-        <div className="category">Food & Drink</div>
-      </section>
-    </main>
+    <div className="landing-container">
+      <h1 className="title">Smart Event Management Platform</h1>
+      
+      <div className="button-container">
+        <Link to="/make-plans" className="btn primary">Make Plans</Link>
+        <Link to="/explore-events" className="btn primary">Explore Events</Link>
+      </div>
+
+      <div className="categories">
+        <button>Music</button>
+        <button>Nightlife</button>
+        <button>Performing Arts</button>
+        <button>Holidays</button>
+        <button>Dating</button>
+        <button>Hobbies</button>
+        <button>Business</button>
+        <button>Food & Drink</button>
+      </div>
+    </div>
   );
 }
-
-export default LandingPage;
