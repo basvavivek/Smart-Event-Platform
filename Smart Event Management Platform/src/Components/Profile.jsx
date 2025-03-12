@@ -41,7 +41,6 @@ function Profile() {
           <input type="file" accept="image/*" onChange={handleImageUpload} className="upload-btn" />
         </div>
       </div>
-      
     </>
   );
 }
