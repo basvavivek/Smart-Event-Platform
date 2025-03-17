@@ -1,44 +1,94 @@
-/* LoginPage.css */
-.login-container {
+/* Importing styles from LoginPage.css */
+
+/* Styling for SignUp Page */
+.auth-container {
   width: 100%;
   max-width: 400px;
   margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.login-container h2 {
+.auth-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.auth-container h2 {
   margin-bottom: 20px;
   color: #333;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.login-container form {
+.auth-container form {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
-.login-container input {
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.auth-container input {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
   font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
 }
 
-.login-container button {
+.auth-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Gender Selection Styling */
+.gender-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.gender-container label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.auth-container button {
   background: #007bff;
   color: white;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  transition: background 0.3s;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
-.login-container button:hover {
+.auth-container button:hover {
   background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Extra interactive elements */
+.auth-container p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.auth-container a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
 }

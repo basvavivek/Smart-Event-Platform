@@ -1,18 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+
 import Footer from "./components/Footer"; // ✅ Import Footer
 import HomePage from "./components/HomePage";
-import LoginPage from "./components/LoginPage";
+
 import SignUp from "./components/SignUp";
 import Profile from "./components/Profile";
 import { AuthProvider } from "./context/AuthContext";
+import LoginPage from "./Components/LoginPage";
+import Header from "./components/Header";
+
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <Header />
+     <Header />
         <div className="content"> {/* Wrapper for content */}
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -21,7 +24,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
-        <Footer /> {/* ✅ Footer added */}
+        {/*Footer /> {/* ✅ Footer added */}
       </Router>
     </AuthProvider>
   );
