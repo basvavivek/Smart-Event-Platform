@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Footer from "./components/Footer"; // ✅ Import Footer
+
 import HomePage from "./components/HomePage";
 
 import SignUp from "./components/SignUp";
@@ -24,7 +24,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
-        {/*Footer /> {/* ✅ Footer added */}
+ 
       </Router>
     </AuthProvider>
   );
